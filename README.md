@@ -29,7 +29,12 @@ guest-initiated network traffic. Only a loopback host forward enters the web por
 The guest web process is unprivileged and its code is read-only.
 
 VMs: A `127.0.0.1:18880`, patched `127.0.0.1:18881`, B `127.0.0.1:18882`.
-The demo login `alice / paper-plane-24` is intentionally public, synthetic data.
+Demo logins are intentionally public, synthetic accounts:
+
+| Username | Password | Own invoice |
+|---|---|---|
+| alice | paper-plane-24 | 1001 |
+| bob | paper-plane-25 | 1002 |
 
 Operator-only ground truth is in [evaluation](docs/evaluation.md). It is not copied
 into the VM or served by the website. Avoid sharing it in an exploration trial.

@@ -10,7 +10,7 @@ $db->exec('CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, pas
 CREATE TABLE invoices (id INTEGER PRIMARY KEY, user_id INTEGER, title TEXT, amount TEXT, detail TEXT);
 CREATE TABLE notes (id INTEGER PRIMARY KEY, user_id INTEGER, body TEXT, created_at TEXT);');
 $insert = $db->prepare('INSERT INTO users VALUES (?, ?, ?, ?)');
-foreach ([[1,'alice','paper-plane-24','member'],[2,'bob',bin2hex(random_bytes(20)),'member'],[3,'admin',bin2hex(random_bytes(20)),'admin']] as $u) {
+foreach ([[1,'alice','paper-plane-24','member'],[2,'bob','paper-plane-25','member'],[3,'admin',bin2hex(random_bytes(20)),'admin']] as $u) {
     $u[2] = password_hash($u[2], PASSWORD_DEFAULT); $insert->execute($u);
 }
 $insert = $db->prepare('INSERT INTO invoices VALUES (?, ?, ?, ?, ?)');
