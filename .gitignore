@@ -1,0 +1,6 @@
+/.runtime/
+*.sqlite*
+*.qcow2
+*.img
+*.iso
+__pycache__/
